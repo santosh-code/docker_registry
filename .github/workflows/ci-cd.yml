@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+permissions:
+  contents: read
+  packages: write   # 🔑 this is needed to push to GHCR
 
 env:
   IMAGE: ghcr.io/${{ github.repository }}:latest
